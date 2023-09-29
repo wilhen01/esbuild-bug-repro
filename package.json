@@ -1,0 +1,45 @@
+{
+  "name": "eslint-bug-repro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilhen01/esbuild-bug-repro.git"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "bin": {
+    "aumidev": "./bin/aumi-ts-node.ts"
+  },
+  "scripts": {
+    "build": "esbuild build.ts --format=cjs | NODE_ENV=production node",
+    "build:debug": "esbuild build.ts --format=cjs | DEBUG=true node",
+    "build:dev": "esbuild build.ts --format=cjs | node",
+    "fmt": "dprint fmt",
+    "test": "tsc --noEmit --skipLibCheck && jest --passWithNoTests"
+  },
+  "dependencies": {
+    "execa": "^5.0.0",
+    "find-packages": "^8.0.2",
+    "ink": "4.4.1",
+    "ink-gradient": "^2.0.0",
+    "react": "^18.2.0",
+    "react-devtools-core": "4.28.0",
+    "read-yaml-file": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/ink-gradient": "^2.0.1",
+    "@types/node": "^15.6.0",
+    "@types/react": "^18.2.21",
+    "dprint": "^0.27.1",
+    "esbuild": "^0.19.3",
+    "jest": "~29",
+    "ts-node": "latest",
+    "typescript": "latest"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
